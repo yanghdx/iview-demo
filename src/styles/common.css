@@ -1,0 +1,66 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    background-color: #2f4050;
+    font-size: 13px;
+    color: #676a6c;
+    overflow-x: hidden;
+}
+
+.gray-bg {
+    background-color: #f3f3f4;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #2f4050;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+#page-wrapper {
+    /*position: absolute;*/
+    margin: 0 0 0 200px;
+    height: 100%;
+    min-height: 750px;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: #2f4050;
+}
+
+.navbar-static-side {
+    z-index: 2001;
+    position: absolute;
+    width: 200px;
+}
+
+.navbar-top-links li {
+    display: inline-block;
+}
+
+.nav-header {
+    padding: 20px 50px;
+    background: url('../images/header-profile.png') no-repeat;
+}
+
+.nav-top {
+    height: 50px;
+    border: 0;
+    border-radius: 0;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.font-bold {
+    font-weight: 600;
+}
