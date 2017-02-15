@@ -2,7 +2,7 @@
     <div>
         <Menu :theme="'dark'" width="200" :accordion="true" @on-select="goMenu">
             
-            <Submenu v-for="m1 in menus" key="menu.name">
+            <Submenu v-for="m1 in menus" :key="menu.name">
                 <template slot="title">
                     <Icon type="ios-paper"></Icon>
                     {{m1.title}}
