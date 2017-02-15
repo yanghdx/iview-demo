@@ -1,23 +1,40 @@
+<style>
+    @import '../styles/common.css';
+</style>
 <template>
-    <div class="index">
-        <Row type="flex" justify="center" align="middle">
-            <i-col span="24">
-                <h1>
-                    <img src="../images/logo.png">
-                </h1>
-                <h2>一套基于 Vue.js 的高质量UI组件库</h2>
-            </i-col>
-        </Row>
+    <div id="wrapper" :style="{height: windowHeight + 'px'}">
+        <left></left>
+        <div id="page-wrapper" class="gray-bg">
+            <right-top></right-top>
+            <router-view transition="fade"
+                         transition-mode="out-in"></router-view>
+            <right-footer></right-footer>
+        </div>
     </div>
 </template>
 <script>
     export default {
+        data () {
+            return {
+                windowHeight: 750
+            }
+        },
+        created() {
+            if (window.innerHeight > 750) {
+                this.windowHeight = window.innerHeight;
+            }
+        },
+        ready () {
 
+        },
+        methods: {
+
+        },
+        components: {
+            left: require('../components/left.vue'),
+            rightTop: require('../components/right-top.vue'),
+            rightContent: require('../components/right-content.vue'),
+            rightFooter: require('../components/right-footer.vue'),
+        }
     }
 </script>
-<style scoped>
-    .index{
-        font-size: 13px;
-        background-color: inherit;
-    }
-</style>
